@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📝 Credit Card Approval Form</h1>
+
+<p>Please enter the applicant details below.</p>
+
+<form action="/result" method="POST">
+
+<h2>👤 Personal Information</h2>
+
+<label>🏠 Do you own a house?</label>
+<select name="FLAG_OWN_REALTY">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>👤 Gender</label>
+<select name="CODE_GENDER_1">
+    <option value="1">Male</option>
+    <option value="0">Female</option>
+</select>
+
+<label>🚗 Do you own a car?</label>
+<select name="FLAG_OWN_CAR_1">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<hr>
+
+<h2>👨‍👩‍👧 Family Details</h2>
+
+<label>Number of Children</label>
+<input type="number" name="CNT_CHILDREN" min="0" required>
+
+<label>Number of Family Members</label>
+<input type="number" name="CNT_FAM_MEMBERS" required>
+
+<label>Total Family Members</label>
+<input type="number" name="TOTAL_FAMILY_MEMBERS" required>
+
+<hr>
+
+<h2>💰 Financial Details</h2>
+
+<label>💵 Annual Income</label>
+<input type="number" name="AMT_INCOME_TOTAL" required>
+
+<label>💼 Income Type</label>
+<select name="NAME_INCOME_TYPE" required>
+    <option value="">-- Select Income Type --</option>
+    <option value="4">Working</option>
+    <option value="0">Commercial Associate</option>
+    <option value="2">Pensioner</option>
+    <option value="3">State Servant</option>
+    <option value="1">Student</option>
+</select>
+
+<label>🎓 Education Level</label>
+<select name="NAME_EDUCATION_TYPE" required>
+    <option value="">-- Select Education Level --</option>
+    <option value="4">Higher Education</option>
+    <option value="3">Secondary / Secondary Special</option>
+    <option value="2">Incomplete Higher</option>
+    <option value="1">Lower Secondary</option>
+    <option value="0">Academic Degree</option>
+</select>
+
+<label>🎂 Age (Years)</label>
+<input type="number" name="DAYS_BIRTH" required>
+
+<label>💼 Years of Employment</label>
+<input type="number" name="DAYS_EMPLOYED" required>
+
+<hr>
+
+<h2>📞 Contact Details</h2>
+
+<label>☎️ Work Phone Available?</label>
+<select name="FLAG_WORK_PHONE">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>📱 Personal Phone Available?</label>
+<select name="FLAG_PHONE">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>📧 Email Available?</label>
+<select name="FLAG_EMAIL">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<hr>
+
+<h2>🏠 Housing Information</h2>
+
+<label>🏢 House / Apartment</label>
+<select name="NAME_HOUSING_TYPE_1">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<label>🏛️ Municipal Apartment</label>
+<select name="NAME_HOUSING_TYPE_2">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<label>🏢 Office Apartment</label>
+<select name="NAME_HOUSING_TYPE_3">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<label>🏠 Rented Apartment</label>
+<select name="NAME_HOUSING_TYPE_4">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<label>👨‍👩‍👧 Living With Parents</label>
+<select name="NAME_HOUSING_TYPE_5">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<hr>
+
+<h2>👨‍👩‍👧 Family Status</h2>
+
+<label>💍 Married</label>
+<select name="NAME_FAMILY_STATUS_1">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<label>🤝 Separated</label>
+<select name="NAME_FAMILY_STATUS_2">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<label>🙍 Single / Not Married</label>
+<select name="NAME_FAMILY_STATUS_3">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<label>🖤 Widow</label>
+<select name="NAME_FAMILY_STATUS_4">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+</select>
+
+<hr>
+
+<h2>📊 Credit History</h2>
+
+<label>📅 Credit History Start (Months)</label>
+<input type="number" name="open_month" required>
+
+<label>📅 Credit History End (Months)</label>
+<input type="number" name="end_month" required>
+
+<label>📊 Credit History Duration (Months)</label>
+<input type="number" name="window" required>
+
+<br>
+
+<input type="submit" value="🔍 Predict Approval">
+
+</form>
+
+</div>
+
+</body>
+</html>

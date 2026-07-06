@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💳 Credit Card Approval Prediction</h1>
+
+    {% if "Approved" in prediction %}
+
+    <div class="result-success">
+        <h2>✅ CREDIT CARD APPROVED</h2>
+
+        <p>
+            Congratulations!<br><br>
+
+            Based on the applicant's financial and demographic
+            information, the Machine Learning model predicts that
+            the credit card application is <b>APPROVED.</b>
+        </p>
+    </div>
+
+    {% else %}
+
+    <div class="result-fail">
+        <h2>❌ CREDIT CARD REJECTED</h2>
+
+        <p>
+            Based on the applicant's financial and demographic
+            information, the Machine Learning model predicts that
+            the credit card application is <b>REJECTED.</b>
+        </p>
+    </div>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/predict">
+        <button>🔄 Predict Again</button>
+    </a>
+
+    <br><br>
+
+    <a href="/">
+        <button>🏠 Back to Home</button>
+    </a>
+
+    <div class="footer">
+        <hr><br>
+        Developed using Flask • Machine Learning • Random Forest Classifier
+    </div>
+
+</div>
+
+</body>
+</html>
