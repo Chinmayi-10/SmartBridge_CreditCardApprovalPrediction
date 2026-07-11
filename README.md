@@ -38,16 +38,26 @@ Install dependencies
 
 ```
 pip install -r requirements.txt
+
 ```
 
 Run the application
 
 ```
 python app.py
+
 ```
 
 Open
 
 ```
 http://127.0.0.1:5000
+
+```
+
+Demo Video Link
+
+```
+https://drive.google.com/file/d/1IRpzCp95hrZLK-sGoqyKbmTKT--QuQOX/view?usp=sharing
+
 ```
