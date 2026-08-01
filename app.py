@@ -51,8 +51,8 @@ def result():
     age_years = int(request.form["DAYS_BIRTH"])
     work_years = int(request.form["DAYS_EMPLOYED"])
 
-    days_birth = -(age_years * 365)
-    days_employed = -(work_years * 365)
+    days_birth = age_years * 365
+    days_employed = work_years * 365
 
     # ---------------- Occupation ----------------
     # Temporary default because your current form doesn't have this field.
